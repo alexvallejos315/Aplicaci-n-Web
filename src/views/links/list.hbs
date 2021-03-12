@@ -1,0 +1,36 @@
+<div class="container-fluid  ">
+   <div class="row list_image">
+
+      {{#each links}}
+
+      <div class="col-md-4">
+         <div class="card text-center mt-4 mb-4">
+            <div class="card-body image_card">
+               <a href="{{url}}" target="_blank" style="text-decoration:none">
+
+                  <h5 class="card-title text-uppercase text_list"><strong>{{title}}</strong></h5>
+
+               </a>
+               <p class="m-2 change_hbs1">{{description}}</p>
+               <p class="change_hbs2">
+                  {{timeago created_at}}
+               </p>
+               <a href="/links/delete/{{id}}" class="btn btn-danger">Delete link</a>
+               <a href="/links/edit/{{id}}" class="btn btn-secondary">Edit</a>
+            </div>
+         </div>
+      </div>
+      {{else}}
+      <div class="container-fluid image_newcard">
+         <div class="col-md-4   mx-auto card_info">
+            <div class=" text-center mb-2 ">
+               <strong>
+                  <p>There are not links saved yet.</p>
+                  <a href="/links/add" class="text_create " style="text-decoration:none">Create one !!!</a>
+               </strong>
+            </div>
+         </div>
+      </div>
+      {{/each}}
+   </div>
+</div>

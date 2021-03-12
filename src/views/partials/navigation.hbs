@@ -1,0 +1,26 @@
+<!-- Image and text -->
+<nav class="navbar image_navigation">
+   <a class="navbar-brand" href="#">
+      <img src="/images/navigation_logo.jpg" width="130" height="110" class="d-inline-block align-center">
+      <span class="title-form">Write C.O</span>
+   </a>
+   {{#if user}}
+
+   <li class="nav-item dropdown mr-4 d-inline-block  nav-text  ">
+      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+         aria-expanded="false">
+         Dropdown
+         <div class="dropdown-divider"><a class="dropdown-item" href="/links/add">Add Link</a>
+
+         </div>
+      </a>
+      <div class="dropdown-menu " aria-labelledby="navbarDropdown">
+         <a class="dropdown-item" href="/links/add">Add Link</a>
+         <a class="dropdown-item" href="/links">All links</a>
+         <a class="dropdown-item" href="/profile">Profile</a>
+         <a class="dropdown-item" href="/logout">Exit</a>
+      </div>
+   </li>
+
+   {{/if }}
+</nav>

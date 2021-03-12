@@ -1,0 +1,27 @@
+<div class="container image_body">
+  <div class="row ">
+    <div class="col-md-4 mx-auto ">
+      <h3 class="text-center text-notes"><strong>NOTES</strong></h3>
+      <div class="card-body mt-4 title-form">
+        <form action="/links/edit/{{link.id}}" method="POST">
+          <div class="form-group">
+            <input type="text" class="form-control" value="{{link.title}}" name="title" placeholder="Title" autofocus>
+          </div>
+          <div class="form-group">
+            <input type="url" class="form-control mt-4" value="{{link.url}}" name="url" placeholder="URL">
+          </div>
+          <div class="form-group mt-4">
+            <textarea name="description" class="form-control" cols="30" rows="3"
+              placeholder="Description">{{link.description}}</textarea>
+          </div>
+          <div class="form-group mt-4">
+            <div class="d-grid gap-2">
+              <button class="btn btn-primary btn-block" type="submit">Send</button>
+
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
